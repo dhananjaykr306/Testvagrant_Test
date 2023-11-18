@@ -34,35 +34,35 @@ class shopKeeper:
         
 
         
-product1 = shopKeeper("Leather wallet",1100,18,1)
-product2 = shopKeeper("Umbrella",900,12,4)
-product3 = shopKeeper("Cigarette",200,28,3)
-product4 = shopKeeper("Honey",100,0,2)
 
-prod = [product1,product2,product3,product4]
+Product1 = shopKeeper("Leather wallet",1100,18,1)
+Product2 = shopKeeper("Umbrella",900,12,4)
+Product3 = shopKeeper("Cigarette",200,28,3)
+Product4 = shopKeeper("Honey",100,0,2)
 
-for product in prod:
-    product.calc_dis_price()
-    product.calc_gst_price()
-    product.quan_price()
-    product.calc_gst()
+prod = [Product1,Product2,Product3,Product4]
+
+for Product in prod:
+    Product.calc_dis_price()
+    Product.calc_gst_price()
+    Product.quan_price()
+    Product.calc_gst()
 
     
 print("Product Gsts are : ")
 
 max_gst = 0
-obj = ""
+pro = ""
 j=1
-for product in prod:
-    if product.gst>max_gst:
-        obj = product.n
-        max_gst = product.gst
+for Product in prod:
+    if Product.gst>max_gst:
+        obj = Product.n
+        max_gst = Product.gst
         j+=1
         
-print("The maximum gst among the product is: ",max_gst)
-print("The product for which we pay max GST amount is", obj)
+print("The Product for which we pay max GST amount is", pro)
 total_amount = 0     
-for product in prod:
-    total_amount = total_amount + product.finalprice
+for Product in prod:
+    total_amount = total_amount + Product.finalprice
                 
 print("The total amount to be paid to the shopkeeper is : ",total_amount)
